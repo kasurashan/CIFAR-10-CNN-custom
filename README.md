@@ -22,6 +22,7 @@ CIFAR10 : 32×32 크기의 컬러 이미지 60000장으로 이루어져 있으�
 Batch size= 64
 비용함수는 CrossEntropyLoss를 사용하였으며 optimizer는 Adam을 사용하였다.
 (learning rate=0.001, weight_decay=0.000001)
+
 모델1 : 마지막에 fully connected layer를 사용
 
 모델2 : 마지막에 average pooling을 사용
@@ -38,6 +39,7 @@ Batch size= 64
 실험 결과 및 분석
 
 accuracy 및 average loss 비교
+
 (파랑 : fully connected , 노랑 : average pooling, 초록 : average pooling + dropout)
 
 ![image](https://user-images.githubusercontent.com/73826816/132704589-f6ee79db-d30d-4d07-a052-639a14d3b9bb.png)
