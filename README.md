@@ -12,6 +12,8 @@ CIFAR10 : 32×32 크기의 컬러 이미지 60000장으로 이루어져 있으�
 
 - 사용된 모델 및 학습 방법
 ![image](https://user-images.githubusercontent.com/73826816/132704447-6843cea6-df14-4c82-816e-58cc42dbfd78.png)
+
+
 Batch size= 64
 비용함수는 CrossEntropyLoss를 사용하였으며 optimizer는 Adam을 사용하였다.
 (learning rate=0.001, weight_decay=0.000001)
@@ -27,6 +29,8 @@ Batch size= 64
 1) accuracy 및 average loss 비교
 (파랑 : fully connected , 노랑 : average pooling, 초록 : average pooling + dropout)
 ![image](https://user-images.githubusercontent.com/73826816/132704589-f6ee79db-d30d-4d07-a052-639a14d3b9bb.png)
+
+
 Fully connected에 비해 average pooling이 근소하게 높은 정확도를 보여줬고 loss average도 대략 40 epoch전까지는 더 낮았는데 이는 average pooling이 비교적 매개변수요구량이 적고 일반화 능력이 좋기 때문에 그런 것으로 보인다. 다만 두가지 경우 모두 loss average가 초반에는 급격히 줄어들다가 이후에는 계속 증가하는 경향을 보였는데 이는 overfitting 이슈가 발생한 것으로 보인다. Dropout을 추가한 모델의 경우에는 초반에는 다른 모델들에 비해 loss가 크지만 점차적으로 줄어드는 경향성을 보여줬으며 20epoch이후에는 가장 작은 average loss를 보여주며 overfitting 이슈가 어느정도 해결되었음을 알 수 있었다.
 
 4. Conclusion
