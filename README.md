@@ -27,11 +27,13 @@ Batch size= 64
 모델3 : 모델2 + dropout 사용
 
 - 아이디어를 생각하게 된 이유
+
 분류하려는 대상이 가장자리도 점유하고 있기 때문에 가장자리 픽셀들이 중앙 픽셀들에 비해 과소평가되는 것을 막기 위해 padding을 사용하였고 이미지의 해상도가 낮아서 정보손실을 막기위해 stride를 1로 최소화해서 진행했다. 또한 depth를 최대한 늘리기 위해서 이미지 크기가 줄어들지 않도록 3×3 크기의 작은 필터를 사용하였다. Max pooling 과정에서 pool들이 겹쳐지면서 최대값들이 중복돼서 나오는 것을 방지하기 위해 pooling 과정에서 2×2 filter를 stride=2로 설정해서 pool들이 겹치는 경우를 막았다. overfitting을 방지하기 위해 데이터를 정규화(normalization)하고 weight_decay를 설정해서 regularization 또한 고려해줬으며 모델 3의 경우에는 dropout을 추가해줬다.
 
 3. Experiment Result
 
 - 실험 결과 및 분석
+
 1) accuracy 및 average loss 비교
 (파랑 : fully connected , 노랑 : average pooling, 초록 : average pooling + dropout)
 
