@@ -21,7 +21,9 @@ Batch size= 64
 비용함수는 CrossEntropyLoss를 사용하였으며 optimizer는 Adam을 사용하였다.
 (learning rate=0.001, weight_decay=0.000001)
 모델1 : 마지막에 fully connected layer를 사용
+
 모델2 : 마지막에 average pooling을 사용
+
 모델3 : 모델2 + dropout 사용
 
 - 아이디어를 생각하게 된 이유
