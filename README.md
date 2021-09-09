@@ -1,6 +1,8 @@
 # CIFAR-10-CNN-custom
 예전에 학교 딥러닝 강의 들을 때 처음으로 만든 것 
 
+
+
 1. Introduction 
 
 1학기 동안 배운 내용을 확실하게 이해하기 위해서는 간단하더라도 내가 직접 모델을 설계해보는 것이 좋을 것이라고 생각했다. 이에 따라 MNIST에 비해 좀 더 복잡한 이미지인 CIFAR10을 이용하여 Convolution Neural Network (CNN)을 통해 CIFAR10 이미지 데이터셋을 분류하기 위한 모델들을 만들어보고 성능을 비교해보기로 연구주제를 잡았다.
@@ -34,7 +36,7 @@ Batch size= 64
 
 - 실험 결과 및 분석
 
-1) accuracy 및 average loss 비교
+accuracy 및 average loss 비교
 (파랑 : fully connected , 노랑 : average pooling, 초록 : average pooling + dropout)
 
 ![image](https://user-images.githubusercontent.com/73826816/132704589-f6ee79db-d30d-4d07-a052-639a14d3b9bb.png)
