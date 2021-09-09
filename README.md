@@ -2,10 +2,12 @@
 예전에 학교 딥러닝 강의 들을 때 처음으로 만든 것 
 
 1. Introduction 
+
 1학기 동안 배운 내용을 확실하게 이해하기 위해서는 간단하더라도 내가 직접 모델을 설계해보는 것이 좋을 것이라고 생각했다. 이에 따라 MNIST에 비해 좀 더 복잡한 이미지인 CIFAR10을 이용하여 Convolution Neural Network (CNN)을 통해 CIFAR10 이미지 데이터셋을 분류하기 위한 모델들을 만들어보고 성능을 비교해보기로 연구주제를 잡았다.
 
 
 2. Implementation Details
+
 - 사용된 데이터 
 CIFAR10 : 32×32 크기의 컬러 이미지 60000장으로 이루어져 있으며 10개의 class로 분류된다. 60000장 중
 에 50000장은 training image이며 10000장은 test image이다. 이를 정규화 시켜서 진행했다. 
@@ -26,6 +28,7 @@ Batch size= 64
 분류하려는 대상이 가장자리도 점유하고 있기 때문에 가장자리 픽셀들이 중앙 픽셀들에 비해 과소평가되는 것을 막기 위해 padding을 사용하였고 이미지의 해상도가 낮아서 정보손실을 막기위해 stride를 1로 최소화해서 진행했다. 또한 depth를 최대한 늘리기 위해서 이미지 크기가 줄어들지 않도록 3×3 크기의 작은 필터를 사용하였다. Max pooling 과정에서 pool들이 겹쳐지면서 최대값들이 중복돼서 나오는 것을 방지하기 위해 pooling 과정에서 2×2 filter를 stride=2로 설정해서 pool들이 겹치는 경우를 막았다. overfitting을 방지하기 위해 데이터를 정규화(normalization)하고 weight_decay를 설정해서 regularization 또한 고려해줬으며 모델 3의 경우에는 dropout을 추가해줬다.
 
 3. Experiment Result
+
 - 실험 결과 및 분석
 1) accuracy 및 average loss 비교
 (파랑 : fully connected , 노랑 : average pooling, 초록 : average pooling + dropout)
