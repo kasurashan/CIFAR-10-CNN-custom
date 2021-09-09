@@ -11,6 +11,7 @@ CIFAR10 : 32×32 크기의 컬러 이미지 60000장으로 이루어져 있으�
 에 50000장은 training image이며 10000장은 test image이다. 이를 정규화 시켜서 진행했다. 
 
 - 사용된 모델 및 학습 방법
+- 
 ![image](https://user-images.githubusercontent.com/73826816/132704447-6843cea6-df14-4c82-816e-58cc42dbfd78.png)
 
 
@@ -28,6 +29,7 @@ Batch size= 64
 - 실험 결과 및 분석
 1) accuracy 및 average loss 비교
 (파랑 : fully connected , 노랑 : average pooling, 초록 : average pooling + dropout)
+
 ![image](https://user-images.githubusercontent.com/73826816/132704589-f6ee79db-d30d-4d07-a052-639a14d3b9bb.png)
 
 
